@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessnz - Unlock More Teaching, Less Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F; /* Near-black background */
+        }
+        
+        /* Abstract background art container */
+        .background-art {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 10 90 Q 50 20 90 90 T 190 90' stroke='%234f46e5' stroke-width='0.5' fill='none'/%3E%3Cpath d='M 10 110 Q 50 180 90 110 T 190 110' stroke='%23ec4899' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
+            background-size: 400px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        /* Glow effect for the hero section */
+        .hero-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            background-image: radial-gradient(circle, rgba(79, 70, 229, 0.3) 0%, rgba(79, 70, 229, 0) 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Gradient text for headlines */
+        .gradient-text {
+            background-image: linear-gradient(to right, #f3f4f6, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .main-cta {
+            background-image: linear-gradient(to right, #4f46e5 0%, #a855f7 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .main-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+        }
+
+        .benefit-card {
+            background-color: rgba(24, 24, 29, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .benefit-card:hover {
+            background-color: rgba(24, 24, 29, 0.8);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .secondary-cta {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .secondary-cta:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <!-- Background Art Container -->
+    <div class="background-art"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center border border-slate-800 bg-black/50 backdrop-blur-lg rounded-full px-4 py-2">
+                <a href="index.html">
+                    <img src="Lessnz-app-logo.jpg" alt="Lessnz Logo" class="h-10 w-auto">
+                </a>
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-400">
+                    <a href="features.html" class="hover:text-white transition-colors">Features</a>
+                    <a href="pricing.html" class="hover:text-white transition-colors">Pricing</a>
+                    <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Login</a>
+                    <a href="#" class="text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors">Sign Up Free</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-slate-900">
+             <a href="features.html" class="block py-2 text-slate-400 hover:text-white">Features</a>
+             <a href="pricing.html" class="block py-2 text-slate-400 hover:text-white">Pricing</a>
+             <a href="about.html" class="block py-2 text-slate-400 hover:text-white">About Us</a>
+             <a href="#" class="block py-2 text-slate-400 hover:text-white">Login</a>
+             <a href="#" class="block mt-2 text-center bg-white/10 text-white font-semibold px-4 py-2 rounded-lg">Sign Up Free</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative hero-glow py-24 md:py-40">
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white">Unlock More Teaching,</h1>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter gradient-text">Less Admin.</h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">Lessnz simplifies studio management, lesson planning, and student engagement for music educators.</p>
+                <div class="mt-10 flex justify-center items-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="main-cta text-white font-bold text-lg px-8 py-4 rounded-full w-full sm:w-auto">Get Started for Free</a>
+                    <a href="#" class="secondary-cta text-slate-300 font-medium px-6 py-4 rounded-full w-full sm:w-auto">Watch Demo &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Showcase Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">From scattered to streamlined.</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">Lessnz brings everything together in one beautifully simple platform.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="benefit-card p-8 rounded-2xl">
+                        <div class="flex justify-center items-center bg-indigo-500/10 rounded-xl w-12 h-12">
+                            <svg class="w-6 h-6 text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Save Valuable Time</h3>
+                        <p class="mt-2 text-slate-400">Automate scheduling, billing, and reminders so you can focus on what you love—teaching.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="benefit-card p-8 rounded-2xl">
+                        <div class="flex justify-center items-center bg-pink-500/10 rounded-xl w-12 h-12">
+                            <svg class="w-6 h-6 text-pink-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" /></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Boost Student Engagement</h3>
+                        <p class="mt-2 text-slate-400">Share resources, give interactive assignments, and track practice logs all in one place.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="benefit-card p-8 rounded-2xl">
+                         <div class="flex justify-center items-center bg-sky-500/10 rounded-xl w-12 h-12">
+                            <svg class="w-6 h-6 text-sky-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.75h16.5m-16.5 3.75h16.5M3.75 17.25h16.5M4.5 12a7.5 7.5 0 0115 0v2.25H4.5V12z" /></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Stay Perfectly Organized</h3>
+                        <p class="mt-2 text-slate-400">Keep all your student info, lesson notes, and teaching materials neatly organized and accessible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Ready to transform your studio?</h2>
+                <p class="mt-4 text-lg text-slate-400">Join hundreds of educators who have simplified their teaching life.</p>
+                <div class="mt-8">
+                    <a href="#" class="main-cta inline-block text-white font-bold text-lg px-8 py-4 rounded-full">Get Started for Free</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500 text-sm">
+             <a href="index.html" class="mb-4 inline-block">
+                <img src="Lessnz-app-logo.jpg" alt="Lessnz Logo" class="h-10 w-auto opacity-60">
+            </a>
+            <div class="mt-4 space-x-6">
+                <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+            </div>
+            <p class="mt-4">&copy; 2025 Lessnz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
