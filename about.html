@@ -80,7 +80,16 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center border border-slate-800 bg-black/50 backdrop-blur-lg rounded-full px-4 py-2">
                 <a href="index.html"> <!-- Link back to homepage -->
-                    <img src="Lessnz-app-logo.png" alt="Lessnz Logo" class="h-10 w-auto">
+                    <svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <text x="0" y="28" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="white">Lessn</text>
+                        <path d="M 75 8 L 95 8 L 80 32 L 60 32 Z" fill="url(#logoGradient)"/>
+                    </svg>
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-400">
                     <a href="features.html" class="hover:text-white transition-colors">Features</a>
