@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180">
+  <defs>
+    <!-- Gradient for the bolt -->
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14e0ff"/>
+      <stop offset="100%" stop-color="#ff3aa7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo text -->
+  <text x="40" y="120"
+        font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-weight="800"
+        font-size="120"
+        fill="#ffffff">Lessn</text>
+
+  <!-- Lightning bolt -->
+  <path d="M380 10 L440 90 L410 90 L450 170"
+        fill="none"
+        stroke="url(#boltGrad)"
+        stroke-width="36"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
