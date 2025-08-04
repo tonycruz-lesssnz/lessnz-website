@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessnz: The Ultimate Music Education Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        /* Define custom colors from the logo */
+        .bg-gradient-lessnz {
+            background-image: linear-gradient(to right, #1A237E, #5C23C2); /* A deep blue to purple gradient */
+        }
+        .text-lessnz-accent { color: #22d3ee; }
+        .bg-lessnz-accent { background-color: #22d3ee; }
+        .hover-bg-lessnz-accent:hover { background-color: #0d9488; }
+        .text-lessnz-dark { color: #1e293b; }
+    </style>
+</head>
+<body class="text-lessnz-dark">
+
+    <!-- Header -->
+    <header class="p-6 md:px-12 flex items-center justify-between bg-white shadow-sm">
+        <!-- Placeholder image (remove this and uncomment the next line when you have your Base64 string) -->
+        <img src="https://placehold.co/150x40/1A237E/FFFFFF?text=Lessnz" alt="Lessnz Logo" class="h-10">
+
+        <!-- Here's an example of how the code would look with the actual Base64 string -->
+        <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAoCAYAAAC9o5OBAAABMElEQVR4nO2aO0rDQAzFf3qF0YwLgYcQ4uABiMGFB1D0EBSx8oGIRnAwkGBG8B+nFq0QjG9hI4fH4m3e/eJmJ9Lz3YV/yT8gAAAAAAB8M1+7j+nO2a2fX+Hn47l/R9n/tBf73XW1V+X3fL+Pz73g9mD981p/lOa2bX+Hn78/6o9vR/q7tL6n+P98f731B+N7wX86L9Vn+Q/EACAX8P1f11V/91/92P+n/yQ/YAAAAAAAAGD4D/x3V12/7H+/1a+b/zQ/AAAAAACAV78H/z34w7/gDwAAAPwYx+f6eD+/AAAAAACAY78H/wP+AAAA/AjxHwAAAAAAAH4N+F8AAAAAAADwb8L/AQAAAAAAAPzYy/8L/wAAAAAAAAB+L/8H/AAAAAAAAPyb+L8AAAAAAAD4v+P/AAAAAACAYzP6/wAAAACA30r+BwAAAAAAAPh3V/4HAAAAAACAd3/AAAAA4I+P/gcAAAAA4B/8AAAAACD8B/8AAAAAgP8fAAAAAAAPvwe83gAAAABJRU5ErkJggg==" alt="Lessnz Final Logo" class="h-10"> -->
+
+        <a href="#early-access" class="hidden md:inline-block px-6 py-2 bg-lessnz-dark text-white font-medium rounded-lg hover:bg-slate-700 transition-colors duration-200">
+            Join Waitlist
+        </a>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
+        <section class="text-center py-16 md:py-24 lg:py-32 bg-gradient-lessnz rounded-xl shadow-lg mt-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-4">
+                Simplify Your Music Studio.<br>Elevate Your Teaching.
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-8">
+                Lessnz is the beautifully simple platform that streamlines lesson planning, enhances student engagement, and frees you to focus on what you do best: making music.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#early-access" class="px-8 py-3 bg-lessnz-accent text-lessnz-dark font-bold rounded-lg shadow-lg hover:bg-cyan-600 transition-colors duration-200">
+                    Get Early Access
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 md:py-20 lg:py-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-lessnz-dark mb-12">
+                Designed by Educators, for Educators
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Centralized Lesson Hub -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-lessnz-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Centralized Lesson Hub</h3>
+                    <p class="text-slate-600">Eliminate lost emails and scattered notes. Keep all your lesson materials, assignments, and media links in one organized place.</p>
+                </div>
+                <!-- Feature 2: Practice Accountability -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-lessnz-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM7 16h4m-4 0l-2-2m2 2v-4m-2-2h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Practice Accountability</h3>
+                    <p class="text-slate-600">Encourage consistent practice with automated nudges and gamified check-ins. Track progress without the tedious follow-up.</p>
+                </div>
+                <!-- Feature 3: Streamlined Studio Admin -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-lessnz-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Streamlined Studio Admin</h3>
+                    <p class="text-slate-600">Save time on administrative tasks like sending reminders and tracking payments, so you can focus more on teaching.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist/Sign-up Section -->
+        <section id="early-access" class="bg-gradient-lessnz rounded-xl text-white p-8 sm:p-12 md:p-16 text-center shadow-lg my-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                Get Early Access to Lessnz
+            </h2>
+            <p class="text-lg text-slate-200 max-w-2xl mx-auto mb-8">
+                Be one of the first music educators to experience a simpler, more effective way to teach. Join our waitlist and we'll notify you as soon as we launch.
+            </p>
+            <form id="waitlistForm" class="flex flex-col md:flex-row max-w-xl mx-auto space-y-4 md:space-y-0 md:space-x-4">
+                <input type="email" placeholder="Enter your email address" required class="flex-1 px-5 py-3 rounded-lg text-lessnz-dark focus:outline-none focus:ring-2 focus:ring-lessnz-accent transition-all duration-200" />
+                <button type="submit" class="px-8 py-3 bg-lessnz-accent text-lessnz-dark font-bold rounded-lg shadow-md hover-bg-lessnz-accent transition-colors duration-200">
+                    Join the Waitlist
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-6 md:px-12 bg-white text-center text-slate-600">
+        <p>&copy; 2025 Lessnz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
