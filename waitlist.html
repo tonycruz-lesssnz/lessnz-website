@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Waitlist | Lessnz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+    <div class="background-art"></div>
+    <div id="root">
+        <header class="sticky top-4 z-50">
+            <nav class="container mx-auto px-6 py-3 flex justify-between items-center glass-nav rounded-full">
+                <a href="index.html">
+                  <img src="Lessnz-app-logo.png" alt="Lessnz Logo" class="h-10 w-auto" />
+                </a>
+                <div class="hidden md:flex items-center space-x-8 text-slate-300">
+                    <a href="product.html" class="hover:text-white transition">Product</a>
+                    <a href="roadmap.html" class="hover:text-white transition">Roadmap</a>
+                    <a href="founders.html" class="hover:text-white transition">Founders</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                </div>
+                <a href="waitlist.html" class="glow-button text-white font-semibold px-6 py-2 rounded-full">Join Waitlist</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="py-24 text-center fade-in-section is-visible">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter mb-4 text-white">
+                        Join the <span class="hero-gradient-text">Waitlist</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
+                        Be the first to know when Lessnz is available. Join our private beta and help us shape the future of music education.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-16 fade-in-section">
+                <div class="container mx-auto px-6 max-w-xl">
+                    <form>
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="form-input">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="form-input">
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <button type="submit" class="glow-button text-white font-semibold px-8 py-3 rounded-full text-lg">Join the Waitlist</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-slate-800">
+            <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+                <p>Lessnz is currently in private beta and actively working with educators to shape the platform.</p>
+                <p>&copy; 2025 Lessnz. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+  <script>
+    const sections = document.querySelectorAll('.fade-in-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    // Manually trigger for the first section
+    if (sections.length > 0) {
+        sections[0].classList.add('is-visible');
+    }
+  </script>
+</body>
+</html>
